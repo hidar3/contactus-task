@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<form  class="contact-form" (ngSubmit)="onSubmit(model)" #userForm="ngForm">
+  <div class="form-head">
+    <h3>Contact Us</h3>
+  </div>
+  <md-input-container class="full-width" >
+    <input mdInput placeholder="Email" type="email" id="email"  required [(ngModel)]="model.email" name="email"
+               #email="ngModel">
+  </md-input-container>
+  <md-input-container class="full-width" >
+    <input mdInput placeholder="Name"  type="text" id="name" required [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+  </md-input-container>
+  <md-input-container class="full-width" >
+    <input mdInput placeholder="Message"  type="text" id="message" required [(ngModel)]="model.message" name="message"
+               #message="ngModel">
+  </md-input-container>
+  <div class="submit-button">
+    <button md-raised-button color="primary" [disabled]="!userForm.valid" type="submit">Submit</button>
+  </div>
+</form>

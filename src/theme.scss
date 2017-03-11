@@ -1,0 +1,16 @@
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+
+md-input-container {
+  .mat-input-underline{
+    border-color: mat-color($mat-blue, 500, 1);
+  }
+}
+md-input-container.ng-invalid.ng-touched {
+  .mat-input-underline{
+    border-color: mat-color($mat-red, 500, 1);
+  }
+}
+
+
+
