@@ -25,7 +25,7 @@ export class AppComponent {
   addExtraClass: boolean = false;
   constructor(public snackBar: MdSnackBar,public _appService: AppService,) {}
   
-  onSubmit(data){
+  onSubmit(data,formEle){
     console.log(data);
     var config = new MdSnackBarConfig();
     config.duration = this.autoHide;
@@ -34,6 +34,7 @@ export class AppComponent {
     this._appService.upload(data).map(x=>x).subscribe(
       data => {
         this.model={};
+        formEle.reset();
       },
       err => {
         console.log(err);
