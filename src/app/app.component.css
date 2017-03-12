@@ -5,11 +5,7 @@
     vertical-align: middle;
     justify-content: center;
     align-items: stretch;
-    border: 1px solid #673ab7!important;
     padding: 1em;
-    -moz-box-shadow: 10px 10px 5px #888;
-    -webkit-box-shadow: 10px 10px 5px #888;
-    box-shadow: 1px 2px 1px 0px #03A9F4;
 }
 .form-head{
     color: #673ab7;
